@@ -25,43 +25,61 @@ html {
 
 body {
   margin: 0 auto;
+  background: url("../images/white_board_background.jpg") no-repeat;
+  background-size: cover;
   font-family: "Verdana", "Geneva", sans-serif;
   font-size: 0.875em; }
 
-input,
-label,
-select,
-textarea {
+.input,
+.label,
+.select,
+.textarea {
   display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
   width: 100%; }
 
 label {
-  display: \$label-display;
-  font-size: \$label-font-size; }
+  display: none; }
+
+input,
+select,
+label {
+  border-radius: 5px;
+  font-size: 1.2em; }
 
 .container {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px;
-  border: 1px solid blue;
-  height: 18.75em; }
+  padding: 20px;
+  /*   height: \$desktop-container-height; */
+  border-radius: 20px;
+  background-color: rgba(108, 0, 255, 0.5); }
   .container::after {
     clear: both;
     content: "";
     display: table; }
 
 .header h1 {
-  margin: 0 auto;
+  margin: 20px auto 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: rgba(108, 0, 255, 0.5);
+  padding: 10px;
+  width: 300px;
   text-align: center;
-  font-size: \$h1-font-size; }
+  font-size: \$h1-font-size;
+  color: RGBA(80, 0, 214, 1); }
 
 .top {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  height: 285px; }
+  /*   height: \$desktop-block-height; */ }
   .top:last-child {
     margin-right: 0; }
   @media screen and (min-width: 401px) and (max-width: 800px) {
@@ -86,7 +104,7 @@ label {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  height: 17.8125em; }
+  /*   height: \$desktop-block-height; */ }
   .middle:last-child {
     margin-right: 0; }
   @media screen and (min-width: 401px) and (max-width: 800px) {
@@ -112,7 +130,7 @@ label {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  height: 17.8125em; }
+  /*   height: \$desktop-block-height; */ }
   .bottom:last-child {
     margin-right: 0; }
   @media screen and (min-width: 401px) and (max-width: 800px) {

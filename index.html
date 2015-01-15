@@ -8,7 +8,9 @@
 <body>
 
   <header class="header">
+
     <h1>Formtastic</h1>
+
 
   </header>
 
@@ -18,45 +20,64 @@
 
         <form>
 
-
         <div class="block top">
+
+          <div class="input first-name-wrap">
           <label for="first-name">First Name</label>
           <input type="text" id="first-name" name="first-name" placeholder="Last Name" required>
+        </div>
 
+        <div class="input last-name-wrap">
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+        </div>
 
+        <div class="input email-wrap">
           <label for="email">Email Addres</label>
           <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
 
+      <div class="select country-wrap">
           <select name="Country">
             <optgroup label="North America">
-              <option value="United States" autofocus>US/option</option>
+              <option value="United States" autofocus>US</option>
                 <option value="Canada">Canada</option>
                 <option value="Mexico">Mexico</option>
                 <option value="South America">South America</option>
+            </optgroup>
             <optgroup label="Europe">
               <option value="UK">UK</option>
               <option value="France">France</option>
               <option value="Italy">Italy</option>
             </optgroup>
+        </select>
+        </div>
 
-            </optgroup>
-          </select>
+        <div class="text-area bio-wrap">
 
                 <label for="bio">Biography</label>
-                <textarea id="Bio" name="bio" placeholder="Biography">
+                <textarea id="Bio" name="bio" placeholder="Biography" cols="30" rows="10">
                 </textarea>
 
-         </div>
+        </div><!-- .bio-wrap -->
+
+      </div><!-- .top -->
 
     <div class="block middle">
+
+      <div class="input phone">
       <label for="phone">Phone Number</label>
       <input type="phone" id="phone" name="phone" placeholder="phone">
+    </div>
+
+    <div class="text-area affiliations">
 
       <label for="affiliations">Affiliations</label>
-      <textarea id="affiliations" placeholder="Affiliations">Affiliations
+      <textarea id="affiliations" placeholder="Affiliations" cols="30" rows="10">Affiliations
       </textarea>
+    </div>
+
+    <div class="select occupation-wrap">
 
       <label for="occupation" placeholder="occupation">Occupation</label>
       <select name="occupation" id="occupation">
@@ -66,16 +87,25 @@
         <option value="Flamethrower">Flamethrower</option>
         <option value="Clueless">Clueless</option>
       </select>
+    </div>
+
+    <div class="input cat-name-wrap">
 
       <label for="cat-name">Cat's Name</label>
       <input type="text" id="cat-name" name="cat-name" placeholder="Cat Name">
+    </div>
+
+    <div class="input favorite-gadget-wrap">
 
       <label for="favorite-gadget">Favorite Gadget</label>
       <input type="text" id="favorite-gadget" placeholder="Favorite Gadget">
+    </div><!-- .favorite-gadget-wrap -->
 
-    </div>
+  </div><!-- .middle -->
 
     <div class="block bottom">
+
+      <div class="select type-talent-wrap">
       <label for="type-talent">Type of Talent</label>
       <select name="type-talent" id="type-talent" placeholder="Type of Talent">
         <option value="brainstormer">Brainstormer</option>
@@ -84,21 +114,33 @@
         <option value="Care Giver">Care Giver</option>
         <option value="Worker Bee">Worker Bee</option>
       </select>
+    </div>
+
+    <div class="input favorite-drink-wrap">
 
       <label for="favorite-drink" placeholder="Favorite Drink"></label>
       <input type="text" id="favorite-drink">
+    </div>
+
+    <div class="input special-power-wrap">
 
       <label for="special-power"></label>
       <input type="text" id="special-power" placeholder="Special Power">
+    </div>
+
+    <div class="input weapon-of-choice">
 
       <label for="weapon-of-choice"></label>
       <input type="text" id="weapon-of-choice" placeholder="Weapon of Choice">
+    </div>
+
+    <div class="text-area comments-wrap">
 
       <label for="comments"></label>
       <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+    </div><!-- .comments-wrap 0-->
 
-
-    </div>
+  </div><!-- .bottom -->
 
 
   </form>

@@ -8,16 +8,19 @@ $box: border-box;
 
 $max-width: em(1200);
 
-$desktop-container-height: em(300);
-$desktop-block-height: em(285);
+$desktop-container-height: em(400);
+$desktop-block-height: em(350);
 
 $block-height: 285px;
 
-$input-height: ($block-height) / (6);
+$input-height: 30px;
+$text-area-height: 60px;
 
-$label-display: relative;
+
+$label-display: none;
 
 $label-font-size: 1em;
+$input-font-size: 1em;
 $h1-font-size: 3em;
 
 $font-size: em(14px);
@@ -46,46 +49,70 @@ $mobile: new-breakpoint(max-width 400px);
 
 body {
   margin: 0 auto;
+  background: url('../images/white_board_background.jpg') no-repeat;
+  background-size: cover;
   font-family: $verdana;
   font-size: $font-size;
 }
 
-input,
-label,
-select,
-textarea {
+
+.input,
+.label,
+.select,
+.textarea {
   display: block;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
   width: 100%;
 }
 
 label {
-  display: \$label-display;
-  font-size: \$label-font-size;
+  display: $label-display;
 }
+
+input,
+select,
+label {
+  border-radius: 5px;
+  font-size: 1.2em;
+
+}
+
 
 .container {
   @include outer-container;
-  @include padding(0 15px 0 15px);
-  border: 1px solid blue;
-  height: $desktop-container-height;
+  @include padding(20px 20px 20px 20px);
+/*   height: \$desktop-container-height; */
+  border-radius: 20px;
+  background-color: rgba(108, 0, 255, .5);
+
+
 
 }
 
 .header h1 {
-  margin: 0 auto;
+  margin: 20px auto 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: rgba(108, 0, 255, .5);
+  padding: 10px;
+  width: 300px;
   text-align: center;
   font-size: \$h1-font-size;
+  color: RGBA(80, 0, 214, 1);
 
 }
 
 
+
 .top {
   @include span-columns(4);
-  height: $block-height;
+/*   height: \$desktop-block-height; */
 
   @include media($tablet) {
     @include span-columns(4);
-
   }
 
   @include media($mobile) {
@@ -93,13 +120,9 @@ label {
   }
 }
 
-
-
-
-
 .middle {
   @include span-columns(4);
-  height: $desktop-block-height;
+/*   height: \$desktop-block-height; */
 
   @include media($tablet) {
     @include span-columns(4);
@@ -113,7 +136,7 @@ label {
 
 .bottom {
   @include span-columns(4);
-  height: $desktop-block-height;
+/*   height: \$desktop-block-height; */
 
   @include media($tablet) {
     @include span-columns(12);
