@@ -1,0 +1,222 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+/*======================================
+            Variables
+======================================*/
+$box: border-box;
+
+$max-width: em(1200);
+
+$desktop-container-height: em(300);
+$desktop-block-height: em(285);
+
+$block-height: 285px;
+
+$input-height: ($block-height) / (6);
+
+$label-display: relative;
+
+$label-font-size: 1em;
+$h1-font-size: 3em;
+
+$font-size: em(14px);
+
+$tablet: new-breakpoint(min-width 401px max-width 800px 8);
+$mobile: new-breakpoint(max-width 400px);
+
+
+
+
+
+/*======================================
+              Base Styles
+======================================*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: $verdana;
+  font-size: $font-size;
+}
+
+input,
+label,
+select,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  display: \$label-display;
+  font-size: \$label-font-size;
+}
+
+.container {
+  @include outer-container;
+  @include padding(0 15px 0 15px);
+  border: 1px solid blue;
+  height: $desktop-container-height;
+
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: \$h1-font-size;
+
+}
+
+
+.top {
+  @include span-columns(4);
+  height: $block-height;
+
+  @include media($tablet) {
+    @include span-columns(4);
+
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+}
+
+
+
+
+
+.middle {
+  @include span-columns(4);
+  height: $desktop-block-height;
+
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega();
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+}
+
+.bottom {
+  @include span-columns(4);
+  height: $desktop-block-height;
+
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================
+            Colors and Fonts
+======================================*/
+
+
+
+
+/*======================================
+            Components
+======================================*/
+
+
+
+/*======================================
+          Media Queries
+======================================*/
+/* \$tablet: new-breakpoint(min-width 401px max-width 800px 8);
+\$mobile: new-breakpoint(max-width 400px); */
+
+/*====== Experimental Neat Code =============*/
+/* ===========================================
+.one,
+.two,
+.three {
+  border: 1px solid blue;
+}
+
+.test-container {
+  @include outer-container;
+  height: 800px;
+
+  @include media(\$tablet) {
+  }
+
+  @include media(\$mobile) {
+  }
+}
+
+.one {
+
+  @include span-columns(4);
+  height: 500px;
+
+  @include media(\$tablet) {
+    @include span-columns(4);
+  }
+
+  @include media(\$mobile) {
+    @include span-columns(12);
+
+    height: 250px;
+  }
+
+
+}
+
+.two {
+  @include span-columns(4);
+  height: 500px;
+
+  @include media(\$tablet) {
+    @include span-columns(4);
+    @include omega();
+  }
+
+  @include media(\$mobile) {
+    @include span-columns(12);
+  }
+}
+
+.three {
+  @include span-columns(4);
+  height: 300px;
+
+  @include media(\$tablet) {
+    @include span-columns(12);
+  }
+
+  @include media(\$mobile) {
+    @include span-columns(4);
+  }
+
+} */
